@@ -1,0 +1,22 @@
+.btn {
+  border-radius: 8px;
+  border-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.35rem;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--color {
+    &-primary {
+      color: rgba(white, 1);
+      background-color: rgba(black, 1);
+    }
+
+    &:hover {
+      transition: 0.2s all ease-out;
+      transform: scale(1.03);
+    }
+  }
+}
