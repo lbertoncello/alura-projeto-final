@@ -1,22 +1,95 @@
 .btn {
-  border-radius: 8px;
-  border-width: 0;
+  align-items: center;
+  border: 0.1rem solid var(--transparent);
+  border-radius: 0.2rem;
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.35rem;
-  padding: 1rem 1rem;
-  text-transform: uppercase;
+  justify-content: center;
+  font-size: 0.65rem;
+  line-height: 0.65rem;
+  padding: 0.65rem 0.7rem;
+  position: relative;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   &--color {
     &-primary {
-      color: rgba(white, 1);
-      background-color: rgba(black, 1);
+      background-color: rgba(var(--primary), 1);
+      color: rgba(var(--white), 1);
+      transition: 0.2s all ease-in;
+
+      &:hover {
+        opacity: 0.95;
+        transition: 0.2s all ease-out;
+        transform: scale(1.1);
+      }
     }
 
-    &:hover {
-      transition: 0.2s all ease-out;
-      transform: scale(1.03);
+    &-red {
+      background-color: rgba(var(--red), 1);
+      color: rgba(var(--white), 1);
+      transition: 0.2s all linear;
+
+      &:hover {
+        opacity: 0.85;
+        transition: 0.2s all linear;
+        transform: scale(1.1);
+      }
     }
+  }
+
+  &--outline {
+    &-primary {
+      background-color: var(--transparent);
+      border-color: rgba(var(--primary), 1);
+      color: rgba(var(--primary), 1);
+      font-weight: 800;
+      transition: 0.2s all linear;
+
+      &:hover {
+        background-color: rgba(var(--primary), 1);
+        color: rgba(var(--white), 1);
+        transition: 0.2s all linear;
+      }
+    }
+  }
+
+  &--size {
+    &-xs {
+      font-size: 0.3rem;
+      line-height: 0.3rem;
+      padding: 0.3rem 0.35rem;
+    }
+
+    &-sm {
+      font-size: 0.4rem;
+      line-height: 0.4rem;
+      padding: 0.4rem 0.45rem;
+    }
+
+    &-nm {
+    }
+
+    &-normal {
+    }
+
+    &-lg {
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      padding: 1.1 1rem;
+    }
+
+    &-xg {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 1.1rem 1.4rem;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
   }
 }

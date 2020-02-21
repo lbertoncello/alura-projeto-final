@@ -10,9 +10,8 @@
       :bannerSubtitle="bannerSubtitle"
       :buttonTitle="buttonTitle"
       :buttonRoute="buttonRoute"
-      :buttonBackgroundColor="buttonBackgroundColor"
-      :buttonTitleColor="buttonTitleColor"
     ></customHeader>
+    <customPanel></customPanel>
     <router-view />
   </div>
 </template>
@@ -20,10 +19,12 @@
 <script>
 import router from '@/router';
 import Header from '@/components/Header.vue';
+import Panel from '@/components/Panel.vue';
 
 export default {
   components: {
     customHeader: Header,
+    customPanel: Panel,
   },
 
   data() {
@@ -33,27 +34,30 @@ export default {
       bannerSubtitle: '30 de Maio | Rio',
       buttonTitle: 'Inscreva-se',
       buttonRoute: '/',
-      buttonBackgroundColor: '#48a3a6',
-      buttonTitleColor: '#ffffff',
     };
   },
 };
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/reset.scss';
 @import '@/assets/scss/buttons.scss';
+@import '@/assets/scss/colors.scss';
+@import '@/assets/scss/text.scss';
 
 #app {
-  background-color: #cfcfcf;
-  color: #2c3e50;
-  display: flex;
+  background-color: var(--default-background);
+  color: var(--default-text);
+  // display: flex;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  // flex-wrap: wrap;
+  // height: 100%;
+  // justify-content: center;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // text-align: center;
 }
 
 // #nav {

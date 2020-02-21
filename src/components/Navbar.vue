@@ -46,7 +46,7 @@ $background-hover-color: #48a3a6;
       color: $font-color;
       background-color: rgba($background-color, 0.1);
       border-radius: 8px;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       margin: 0.3rem;
       padding: 0.8rem 1rem;
       text-decoration: none;

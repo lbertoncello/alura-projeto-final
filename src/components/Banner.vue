@@ -1,17 +1,13 @@
 <template>
   <section class="banner">
     <section class="banner__title">
-      <h1>{{ bannerTitle }}</h1>
-      <h2>{{ bannerSubtitle }}</h2>
+      <h1 class="main-title">{{ bannerTitle }}</h1>
+      <h2 class="title">{{ bannerSubtitle }}</h2>
     </section>
     <section class="banner__call-to-action">
-      <!-- <myButton
-        :title="buttonTitle"
-        :route="buttonRoute"
-        :backgroundColor="buttonBackgroundColor"
-        :titleColor="buttonTitleColor"
-      ></myButton> -->
-      <router-link class="btn btn--color-primary" :to="buttonRoute">TESTE</router-link>
+      <router-link class="btn btn--color-primary btn--size-xg" :to="buttonRoute">{{
+        buttonTitle
+      }}</router-link>
     </section>
   </section>
 </template>
@@ -35,14 +31,6 @@ export default {
       type: String,
       required: true,
     },
-    buttonBackgroundColor: {
-      type: String,
-      required: false,
-    },
-    buttonTitleColor: {
-      type: String,
-      required: false,
-    },
   },
 };
 </script>
@@ -58,12 +46,10 @@ $subtitle-font-color: #85ff9a;
 
     h1 {
       color: $title-font-color;
-      font-size: 3rem;
     }
 
     h2 {
       color: $subtitle-font-color;
-      font-size: 2rem;
     }
   }
 

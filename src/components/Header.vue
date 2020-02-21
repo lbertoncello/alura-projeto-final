@@ -43,14 +43,6 @@ export default {
       type: String,
       required: true,
     },
-    buttonBackgroundColor: {
-      type: String,
-      required: false,
-    },
-    buttonTitleColor: {
-      type: String,
-      required: false,
-    },
   },
 };
 </script>
