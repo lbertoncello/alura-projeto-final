@@ -11,7 +11,6 @@
       :buttonTitle="buttonTitle"
       :buttonRoute="buttonRoute"
     ></customHeader>
-    <customPanel></customPanel>
     <router-view />
   </div>
 </template>
@@ -19,12 +18,10 @@
 <script>
 import router from '@/router';
 import Header from '@/components/Header.vue';
-import Panel from '@/components/Panel.vue';
 
 export default {
   components: {
     customHeader: Header,
-    customPanel: Panel,
   },
 
   data() {
@@ -44,6 +41,8 @@ export default {
 @import '@/assets/scss/buttons.scss';
 @import '@/assets/scss/colors.scss';
 @import '@/assets/scss/text.scss';
+@import '@/assets/scss/container.scss';
+@import '@/assets/scss/img.scss';
 
 #app {
   background-color: var(--default-background);
