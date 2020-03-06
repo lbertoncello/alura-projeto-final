@@ -6,6 +6,7 @@
     </div> -->
     <about></about>
     <palestrantes></palestrantes>
+    <formInscricao></formInscricao>
     <router-view />
   </div>
 </template>
@@ -13,23 +14,22 @@
 <script>
 import About from '@/components/About.vue';
 import Palestrantes from '@/components/Palestrantes.vue';
+import FormInscricao from '@/components/FormInscricao.vue';
 
 export default {
   components: {
     about: About,
     palestrantes: Palestrantes,
+    formInscricao: FormInscricao,
   },
 
   data() {
-    return {
-
-    };
+    return {};
   },
 };
 </script>
 
 <style lang="scss">
-
 #app {
   background-color: var(--default-background);
   color: var(--default-text);
