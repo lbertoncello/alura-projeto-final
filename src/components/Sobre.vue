@@ -1,11 +1,11 @@
 <template>
-  <section class="panel">
+  <section class="sobre" id="sobre">
     <div class="container">
-      <div class="panel-header">
+      <div class="sobre__header">
         <h2 class="title">Muito conteúdo: do frontend ao backend</h2>
         <h3 class="subtitle">30 de Maio de 2017 - na Cidade Maravilhosa</h3>
       </div>
-      <div class="panel-text">
+      <div class="sobre__text">
         <p class="paragraph text-center">
           Com a AluraConf abordaremos o que há de novidade e conhecimentos essenciais a um
           desenvolver mobile.
@@ -24,4 +24,8 @@
 export default {};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.sobre {
+  display: flex;
+}
+</style>

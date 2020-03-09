@@ -1,10 +1,11 @@
 <template>
   <nav class="navbar">
     <ul class="navbar__menu">
-      <li class="navbar__menu__item" v-for="(route, index) in routes" :key="index">
-        <router-link class="navbar__menu__item__link" :to="route.path ? route.path : '/'">
-          {{ route.title }}
-        </router-link>
+      <li class="navbar__menu__item" v-for="(anchor, index) in anchors" :key="index">
+        <!-- <a :href="'#' + anchor.id">{{ anchor.title }}</a> -->
+        <a class="navbar__menu__item__link" :href="anchor.id ? anchor.id : '#'">{{
+          anchor.title
+        }}</a>
       </li>
     </ul>
   </nav>
@@ -13,7 +14,7 @@
 <script>
 export default {
   props: {
-    routes: {
+    anchors: {
       type: Array,
       required: true,
     },

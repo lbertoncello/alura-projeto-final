@@ -13,6 +13,7 @@ const routes = [
     },
     title: 'Início',
     showOnMenu: true,
+    id: '#',
   },
   {
     path: '/about',
@@ -35,6 +36,7 @@ const routes = [
     },
     title: 'Sobre',
     showOnMenu: true,
+    id: 'sobre',
   },
   {
     path: '/palestrantes',
@@ -45,6 +47,7 @@ const routes = [
     },
     title: 'Palestrantes',
     showOnMenu: true,
+    id: 'palestrantes',
   },
 ];
 

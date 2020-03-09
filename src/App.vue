@@ -1,43 +1,16 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <customHeader
-      :routes="routes"
-      :bannerTitle="bannerTitle"
-      :bannerSubtitle="bannerSubtitle"
-      :buttonTitle="buttonTitle"
-      :buttonRoute="buttonRoute"
-    ></customHeader>
     <router-view />
   </div>
 </template>
 
 <script>
-import router from '@/router';
-import Header from '@/components/Header.vue';
-
-export default {
-  components: {
-    customHeader: Header,
-  },
-
-  data() {
-    return {
-      routes: router.options.routes.filter((route) => route.showOnMenu),
-      bannerTitle: 'Aluraconf',
-      bannerSubtitle: '30 de Maio | Rio',
-      buttonTitle: 'Inscreva-se',
-      buttonRoute: '/',
-    };
-  },
-};
+export default {};
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/reset.scss';
+@import '@/assets/scss/commom.scss';
 @import '@/assets/scss/buttons.scss';
 @import '@/assets/scss/colors.scss';
 @import '@/assets/scss/text.scss';

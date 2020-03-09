@@ -1,11 +1,10 @@
 <template>
   <header class="header">
-    <navbar :routes="routes"></navbar>
+    <navbar :anchors="anchors"></navbar>
     <banner
       :bannerTitle="bannerTitle"
       :bannerSubtitle="bannerSubtitle"
       :buttonTitle="buttonTitle"
-      :buttonRoute="buttonRoute"
       :buttonBackgroundColor="buttonBackgroundColor"
       :buttonTitleColor="buttonTitleColor"
     ></banner>
@@ -23,7 +22,7 @@ export default {
   },
 
   props: {
-    routes: {
+    anchors: {
       type: Array,
       required: true,
     },

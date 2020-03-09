@@ -4,7 +4,14 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <about></about>
+    <customHeader
+      :anchors="anchors"
+      :bannerTitle="bannerTitle"
+      :bannerSubtitle="bannerSubtitle"
+      :buttonTitle="buttonTitle"
+      :buttonRoute="buttonRoute"
+    ></customHeader>
+    <sobre></sobre>
     <palestrantes></palestrantes>
     <formInscricao></formInscricao>
     <router-view />
@@ -12,19 +19,40 @@
 </template>
 
 <script>
-import About from '@/components/About.vue';
+import Header from '@/components/Header.vue';
+import Sobre from '@/components/Sobre.vue';
 import Palestrantes from '@/components/Palestrantes.vue';
 import FormInscricao from '@/components/FormInscricao.vue';
 
 export default {
   components: {
-    about: About,
+    customHeader: Header,
+    sobre: Sobre,
     palestrantes: Palestrantes,
     formInscricao: FormInscricao,
   },
 
   data() {
-    return {};
+    return {
+      anchors: [
+        {
+          id: '#sobre',
+          title: 'Sobre',
+        },
+        {
+          id: '#palestrantes',
+          title: 'Palestrantes',
+        },
+        {
+          id: '#inscricao',
+          title: 'Inscricao',
+        },
+      ],
+      bannerTitle: 'Aluraconf',
+      bannerSubtitle: '30 de Maio | Rio',
+      buttonTitle: 'Inscreva-se',
+      buttonRoute: '/',
+    };
   },
 };
 </script>

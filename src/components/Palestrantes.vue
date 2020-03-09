@@ -1,5 +1,5 @@
 <template>
-  <section class="palestrantes">
+  <section class="palestrantes" id="palestrantes">
     <div class="container">
       <h3 class="subtitle">Palestrantes</h3>
       <h4 class="h4">Aprenda com palestrantes que são referência no mundo</h4>
@@ -82,6 +82,10 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 </style>
